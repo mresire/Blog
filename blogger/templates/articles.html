@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="createbox" >
+<form action="create" method="post"> {% csrf_token %}
+	<h1>Title <input type="text" name="title" class="datepicker" placeholder="Your Title"></h1>
+	<p> <i class="material-icons prefix">mode_edit</i> Body<textarea name="body" id="textarea1" class="materialize-textarea"></textarea> </p>
+	<input type="date" name="date" placeholder="Enter date" class="datepicker">
+	<input type="text" name="author" placeholder="Your name">
+	<input type="submit" name="submit" value="submit">
+
+</form>
+</div>
+{% endblock %}
