@@ -3,17 +3,11 @@
 {% block content %}
 
 
-<div id="card">
-{% for bn in items %}
-<div class="row">
-      <div class="col s12 m5">
-        <div class="card-panel teal">
-          <span class="white-text"> {{ bn.Body}} </span>
-        </div>
-      </div>
-    </div>
-{% endfor %}     
-    </div>
+<div id="box_container">
+	<h1>{{ bn.Title}} The title is :</h1>
+	<p> {{ bn.Body }} </p>
+
+</div>
   
         
 {% endblock %}
