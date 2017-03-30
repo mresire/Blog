@@ -11,22 +11,14 @@ def search(request):
     results = {}
     results['items'] = article.objects.filter(Title__icontains= Title)
 
-    return render(request,'somewat.html',results)
+    return render(request,'mainpage.html',results)
 
-#def articles(request):objects.all() })
 
-    #return render(request,'articles.html',
-    #            {'articles':article.
-
-#def somewat(request, somewat_id=1):
-    #return render(request,'article.html',
-    #            {'article':article.objects.get(id=somewat_id)})
-
-def page(request):
-    results = {}
-    results['items'] = article.objects.all()
-    #print(results['items'])
-    return render(request,'somewat.html',results)
+def mainpage(request):
+    context = article.objects.all()
+    results = {'items':context}
+    
+    return render(request,'mainpage.html',results)
 
 def create(request):
     Title = request.POST.get('title')
@@ -39,13 +31,13 @@ def create(request):
         updater.save()
         return redirect(reverse('Page'))
     else:        
-        return render(request,'articles.html')
+        return render(request,'create.html')
 
 # def search(request):
 #     return HttpResponse('not Found')
 
-def fullpage(request):
-    results = {}
-    results['items'] = article.objects.all()
+def fullpage(request,article_id):
+    context = article.objects.get(id=article_id)
+    contain = {'items':context}
 
-    return render(request,'fullpage.html',results)
+    return render(request,'fullpage.html',contain)
