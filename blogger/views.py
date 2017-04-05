@@ -15,7 +15,7 @@ def search(request):
 
 
 def mainpage(request):
-    context = article.objects.all()
+    context = article.objects.order_by('-Date')
     results = {'items':context}
     
     return render(request,'mainpage.html',results)
@@ -37,7 +37,7 @@ def create(request):
 #     return HttpResponse('not Found')
 
 def fullpage(request,article_id):
-    context = article.objects.get(id=article_id)
+    context = article.objects.get(pk=article_id)
     contain = {'items':context}
 
     return render(request,'fullpage.html',contain)

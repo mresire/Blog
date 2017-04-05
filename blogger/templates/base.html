@@ -18,29 +18,13 @@ html,body {height: 100%}
 		float: left;
 
 	}
-  #box_container{
-    width: 400px;
-    height: 400px;
-    background-color: blue;
-    color: white;
-
+  footer{
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
   }
-  #card{
-    height: 1000px;  
-    width: 100%;  
-    
-  }
-	#createbox{
-		height: 400px;
-		width: 400px;
-		margin: auto;
-	}
-/*  #container{
-    max-height: 1000px;
-    width: 1000px;
-    float: left;
-    border: 10px solid blue;
-  }*/
+ 
 </style>
 </head>
 <body>
@@ -58,11 +42,11 @@ html,body {height: 100%}
     <div class="nav-wrapper">
       <a href="" class="brand-logo"><img src="{% static 'images/image.jpg' %}" height="160px"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="home">Home</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="" class="dropdown-button" data-activates="dropdown1">Categories</a></li>
        
         <li><input type="text" name="search"></i></li>
-        <input type="submit" name="" value="search">
+        <input type="submit" name="" value="search" class="btn btn-default">
        
       </ul>
     </div>
@@ -80,7 +64,7 @@ html,body {height: 100%}
 {% endblock %}
  </div>
 
-<footer class="page-footer red lighten-1">
+<footer class="page-footer red lighten-1" >
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -100,7 +84,7 @@ html,body {height: 100%}
         <div class="col l3 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
-            <li><a class="white-text" href="#!"> + 250 787 888 6166</a></li>
+            <li><a class="white-text"> + 250 787 888 6166</a></li>
            
             
           </ul>

@@ -2,16 +2,16 @@
 
 {% block content %}
 
-{% for bn in items %}
 
- <!--    <div class="row">
-      <div class="col s12 m5"> -->
+
+ <div class="row">
+      <div class="col s12 m5">
         <div class="card-panel teal">
-        <h1>HAHAHAHAAA!!!!</h1>
-          <span class="white-text">{{ bn.Title }} </span>
-          <p>{{ bn.Body }}</p>
+
+          <span class="white-text">{{ items.Title }} </span>
+          <p>{{ items.Body }}</p>
         </div>
-     <!--  </div>
-    </div> -->
-{% endfor %}        
+      </div>
+    </div> 
+      
 {% endblock %}
