@@ -30,7 +30,7 @@ pyasn1==0.2.3
 pycparser==2.14
 pycrypto==2.6.1
 pyparsing==2.2.0
-PyYAML==3.11
+PyYAML==5.4
 query-string==0.0.8
 request==0.0.8
 requests==2.10.0
