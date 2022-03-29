@@ -19,7 +19,7 @@ ipython-genutils==0.1.0
 Jinja2==2.8
 MarkupSafe==0.23
 packaging==16.8
-paramiko==2.0.1
+paramiko==2.10.1
 pathlib2==2.1.0
 pexpect==4.1.0
 pickleshare==0.7.2
